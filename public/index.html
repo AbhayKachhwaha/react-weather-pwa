@@ -5,25 +5,27 @@
     <link rel="icon" type="image/png" href="./images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Modern PWA weather application"
-    />
+    <meta name="description" content="Modern PWA weather application" />
     <link rel="apple-touch-icon" href="./images/logo.png" />
     <link rel="manifest" href="./manifest.json" />
-
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566399380145194"
+      crossorigin="anonymous"
+    ></script>
     <title>Weather App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      if('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./serviceworker.js')
-          .then((reg)=> console.log('Success: ', reg.scope))
-          .catch((err)=> console.log('Error: ', err))
-        })
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./serviceworker.js")
+            .then((reg) => console.log("Success: ", reg.scope))
+            .catch((err) => console.log("Error: ", err));
+        });
       }
     </script>
   </body>
